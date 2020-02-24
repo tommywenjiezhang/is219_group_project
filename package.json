@@ -1,0 +1,21 @@
+{
+  "name": "group_project_assignment",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "start": "node index.js",
+    "coverage": "jest --coverage",
+    "coveralls": "jest --coverage && cat ./coverage/lcov.info | coveralls"
+  },
+  "author": "Wenjie_Zhang&Anjali",
+  "license": "ISC",
+  "devDependencies": {
+    "coveralls": "^3.0.9",
+    "jest": "^25.1.0"
+  },
+  "dependencies": {
+    "jstat": "^1.9.2"
+  }
+}
