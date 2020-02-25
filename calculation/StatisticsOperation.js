@@ -1,5 +1,6 @@
 const  MathOperation = require('./MathOperation');
 const  { jStat } = require('jstat');
+const  ss = require('simple-statistics');
 
 class StatisticsOperation{
     static mean(arr =[]){
@@ -37,8 +38,34 @@ class StatisticsOperation{
         return (x - StatisticsOperation.mean(arr)) / StatisticsOperation.stdev(arr);
     }
 
+    static quartiles(arr){
+        return jStat.quartiles(arr);
+    }
+    // Skewness
+    static skewness(arr){
+        return ss.sampleSkewness(arr);
+    }
+    // Sample Correlation
+    static sampleCorrlation(set1,set2){
+        let result = ss.sampleCorrelation(set1,set2).toFixed(3);
+        return parseFloat(result);
+    }
+
+    // Population Correlation
+    static populationCorrelation(arr1, arr2){
+        return ss.sampleCovariance(arr1,arr2) / (ss.standardDeviation(arr1) * ss.standardDeviation(arr2))
+    }
+    // Mean Deviation / Mean Absolute Deviation
+    static meanStdev(arr){
+        return jStat.stdev(arr);
+    }
+
 }
 
-let number = StatisticsOperation.median([7,9,12,13,14,15])
-console.log(number)
+// let sourceArr1 = [37,32,77,9,33,27,62,35,23,18,61];
+// let sourceArr2 = [69,58,36,66,86,38,83,16,50,38,86];
+// var seq = jStat.seq( 0, 10, 11 );
+//
+// let number = jStat.corrcoeff( seq, seq )
+// console.log(number)
 module.exports = StatisticsOperation;

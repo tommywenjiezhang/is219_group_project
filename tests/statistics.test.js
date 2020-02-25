@@ -35,5 +35,44 @@ test('Statistic Calculator median', () => {
 
 });
 
+test('Statistic Calculator sample coffieicent', () => {
+    let sourceArr1 = [37,32,77,9,33,27,62,35,23,18,61];
+    let sourceArr2 = [69,58,36,66,86,38,83,16,50,38,86];
+    let test = Stats.sampleCorrlation(sourceArr1,sourceArr2);
+    let result = 0.1785;
+    expect(test).toBeCloseTo(result, 2);
 
+});
 
+test('Statistic Calculator population coffieicent', () => {
+    let sourceArr1 = [37,32,77,9,33,27,62,35,23,18,61];
+    let sourceArr2 = [69,58,36,66,86,38,83,16,50,38,86];
+    let test = Stats.populationCorrelation(sourceArr1,sourceArr2);
+    let result = 0.1785;
+    expect(test).toBeCloseTo(result, 1);
+
+});
+
+test('Statistic Calculator quartile', () => {
+    let sourceArr = [9,18,23,27,32,33,35,37,61,62,77];
+    let test = Stats.quartiles(sourceArr);
+    let result = [23,33,61];
+    expect(test).toEqual(result);
+
+});
+
+test('Statistic Calculator skewness', () => {
+    let sourceArr = [9,18,23,27,32,33,35,37,61,62,77];
+    let test = Stats.skewness(sourceArr);
+    let result = 0.724284
+    expect(test).toBeCloseTo(result, 2);
+
+});
+
+test('Statistic Calculator Mean Dev', () => {
+    let sourceArr = [10, 12, 23, 23, 16, 23, 21, 16];
+    let test = Stats.meanStdev(sourceArr);
+    let result = 4.8989794855664
+    expect(test).toBeCloseTo(result, 2);
+
+});

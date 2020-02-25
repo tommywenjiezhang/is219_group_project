@@ -16,6 +16,7 @@
     "jest": "^25.1.0"
   },
   "dependencies": {
-    "jstat": "^1.9.2"
+    "jstat": "^1.9.2",
+    "simple-statistics": "^7.0.8"
   }
 }
