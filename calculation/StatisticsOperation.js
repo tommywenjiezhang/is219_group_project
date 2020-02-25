@@ -26,7 +26,7 @@ class StatisticsOperation{
         return result;
     }
     static median(arr){
-       return jStat.median(arr)
+       return ss.median(arr)
     }
     static normPdf(xArr){
         return xArr.map((value) => {
@@ -39,7 +39,11 @@ class StatisticsOperation{
     }
 
     static quartiles(arr){
-        return jStat.quartiles(arr);
+        let middle = Math.round(arr.length/2);
+        let q1 = StatisticsOperation.median(arr)
+        let q2 = StatisticsOperation.median(arr.slice(0,middle-1))
+        let q3 = StatisticsOperation.median(arr.slice(middle+1,arr.length -1))
+        return [q1,q2,q3].sort();
     }
     // Skewness
     static skewness(arr){
@@ -53,7 +57,7 @@ class StatisticsOperation{
 
     // Population Correlation
     static populationCorrelation(arr1, arr2){
-        return ss.sampleCovariance(arr1,arr2) / (ss.standardDeviation(arr1) * ss.standardDeviation(arr2))
+        return ss.sampleCovariance(arr1,arr2) / (ss.variance(arr1) * ss.variance(arr2))
     }
     // Mean Deviation / Mean Absolute Deviation
     static meanStdev(arr){
