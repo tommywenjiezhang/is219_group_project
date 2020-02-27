@@ -40,4 +40,11 @@ describe('Cochran', () => {
     });
 });
 
+describe('How to Find a Sample Size Given a Confidence Interval and Width', () => {
+
+    test('result test', () => {
+        var result = ps.clWidth(0.06,0.95,0.41)
+        expect(result).toBeCloseTo(1033,2)
+    });
+});
 
