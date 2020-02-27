@@ -57,13 +57,17 @@ class StatisticsOperation{
 
     // Population Correlation
     static populationCorrelation(arr1, arr2){
-        return ss.sampleCovariance(arr1,arr2) / (ss.variance(arr1) * ss.variance(arr2))
+        return jStat.corrcoeff(arr1,arr2)
     }
     // Mean Deviation / Mean Absolute Deviation
     static meanStdev(arr){
         return jStat.stdev(arr);
     }
 
+    static toString (arr,func){
+        let result = func(arr)
+        console.log("function name: " + func.name + " result is : " + result )
+    }
 }
 
 // let sourceArr1 = [37,32,77,9,33,27,62,35,23,18,61];

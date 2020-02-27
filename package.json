@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "jstat": "^1.9.2",
+    "path": "^0.12.7",
     "simple-statistics": "^7.0.8"
   }
 }
