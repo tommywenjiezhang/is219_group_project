@@ -36,6 +36,25 @@ class ConfidenceInterval {
         if (cL > 1 || p > 1 || W > 1) {
             throw  new Error("Confidence interval cannot bigger than 1")
         } else {
+            let zScore = ConfidenceInterval.zScorefromP(cL)
+            let q = 1 - p;
+            let E = W / 2;
+            let pq = p * q
+            let zAlpha = zScore / E;
+            let answer = pq * mo.square(zAlpha)
+            return answer;
+        }
+
+    }
+    static sampleSizeStd(std, cL, E){
+        let zScore = ConfidenceInterval.zScorefromP(cL)
+        return mo.square((std * zScore )/ E)
+    }
+
+    static zScorefromP(cL) {
+        if (cL > 1 ) {
+            throw  new Error("Confidence interval cannot bigger than 1")
+        } else {
             let lookup = (Math.abs(cL / 2) + 0.5).toFixed(3);
             let data = fs.readFileSync(__dirname + '/zScore.json');
             let zTable = JSON.parse(data);
@@ -56,22 +75,16 @@ class ConfidenceInterval {
                 }
             }
             if (zScore) {
-               zScore = parseFloat(zScore)
+                zScore = parseFloat(zScore)
+                console.log(zScore)
             }
-            let q = 1- p;
-            let E = W /2;
-            let pq = p *q
-            let zAlpha =  zScore / E;
-            let answer = pq * mo.square(zAlpha)
-            return answer;
+            return zScore
         }
-
     }
+
 }
-
-
 module.exports = ConfidenceInterval;
-number = ConfidenceInterval.sampleSizeWithWidth(0.95,0.06)
+number = ConfidenceInterval.sampleSizeWithWidth(0.99,0.06)
 
 
 

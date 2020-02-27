@@ -42,9 +42,18 @@ describe('Cochran', () => {
 
 describe('How to Find a Sample Size Given a Confidence Interval and Width', () => {
 
-    test('result test', () => {
+    test('unknown population standard deviation', () => {
         var result = ps.clWidth(0.06,0.95,0.41)
         expect(result).toBeCloseTo(1033,2)
     });
+
+
+    test('known population standard deviation', () => {
+        var result =  ps.sampleStd(0.99,2.9,0.5)
+        var test =     result >= 221 && result <= 230
+        expect(test).toBeTruthy()
+    });
 });
+
+
 

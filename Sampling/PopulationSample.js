@@ -22,6 +22,10 @@ class PopulationSample{
         return Math.ceil(ci.sampleSizeWithWidth(cL,W,p))
     }
 
+    static sampleStd(cL,std ,E){
+        return Math.ceil(ci.sampleSizeStd(std,cL,E))
+    }
+
 }
 var sourceArr= [3, 8, 11, 17, 19,8, 12, 13, 17, 20]
 let newArr =PopulationSample.simpleRandomTest(sourceArr,5)
