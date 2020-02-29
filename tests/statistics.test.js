@@ -76,3 +76,10 @@ test('Statistic Calculator Mean Dev', () => {
     expect(test).toBeCloseTo(result, 2);
 
 });
+
+test('Statistic Calculator mode', () => {
+    let sourceArr = [10, 12, 23, 23, 16, 23, 21, 16];
+    let test = Stats.mode(sourceArr);
+    let result = 23
+    expect(test).toBeCloseTo(result);
+});

@@ -1,11 +1,12 @@
 const srt = require('./SimpleSample')
 const ci = require('./ConfidenceInterval')
+const sysS= require("./SystemSample")
 const cochran = require("../Sampling/Cochran")
 const  { jStat } = require('jstat');
 const stats = require('../calculation/StatisticsOperation')
-const path = require('path')
+const mE = require("./marginofError")
 
-class PopulationSample{
+class SamplingMethods{
     static simpleRandomTest(arr,samplesize){
         return srt(arr,samplesize)
     }
@@ -25,11 +26,14 @@ class PopulationSample{
     static sampleStd(cL,std ,E){
         return Math.ceil(ci.sampleSizeStd(std,cL,E))
     }
+    static systemSampling(arr,size,start){
+        return sysS(arr,size,start)
+    }
 
+    static marginOfError(std,size,z){
+        return mE(std,size,z);
+    }
 }
-var sourceArr= [3, 8, 11, 17, 19,8, 12, 13, 17, 20]
-let newArr =PopulationSample.simpleRandomTest(sourceArr,5)
-console.log(newArr)
 
-module.exports = PopulationSample;
+module.exports = SamplingMethods;
 

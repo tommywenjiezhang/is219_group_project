@@ -63,7 +63,9 @@ class StatisticsOperation{
     static meanStdev(arr){
         return jStat.stdev(arr);
     }
-
+    static mode(arr){
+        return jStat.mode(arr)
+    }
     static toString (arr,func){
         let result = func(arr)
         console.log("function name: " + func.name + " result is : " + result )
