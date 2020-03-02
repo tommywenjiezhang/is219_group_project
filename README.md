@@ -6,3 +6,12 @@
 [![dependencies Status](https://david-dm.org/tommywenjiezhang/is219_group_project/status.svg)](https://david-dm.org/tommywenjiezhang/is219_group_project) [![devDependency Status](https://david-dm.org/tommywenjiezhang/is219_group_project/dev-status.svg)](https://david-dm.org/tommywenjiezhang/is219_group_project?type=dev)
 
 <h1>Group Project Assignment </h1>
+
+```
+git clone https://github.com/tommywenjiezhang/is219_group_project.git
+cd is219_group_project
+git pull
+git checkout -b newBranch
+git status
+
+```
