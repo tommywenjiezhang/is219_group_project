@@ -7,6 +7,7 @@
 
 <h1>Group Project Assignment </h1>
 
+To start
 ```
 git clone https://github.com/tommywenjiezhang/is219_group_project.git
 cd is219_group_project
@@ -15,3 +16,11 @@ git checkout -b newBranch
 git status
 
 ```
+To push the project once you finish
+```
+git commit -m"new feature"
+git push newBranch
+git request-pull https://github.com/tommywenjiezhang/is219_group_project.git master
+```
+I will merge the project
+
