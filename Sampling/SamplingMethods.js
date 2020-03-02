@@ -36,5 +36,3 @@ class SamplingMethods{
 }
 
 module.exports = SamplingMethods;
-
-console.log(SamplingMethods.normalInv(0.99,))

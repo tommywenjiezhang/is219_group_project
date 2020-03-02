@@ -64,6 +64,7 @@ describe('known population standard deviation', () => {
 });
 
 
+
 describe('Systematic sampling', () => {
     test.each([
         [[3, 8, 11, 17, 19,8, 12, 13, 17, 20], 5, 2,5],
@@ -80,7 +81,4 @@ describe('Systematic sampling', () => {
         expect(isDuplicated).toBeFalsy()
     });
 });
-
-
-
 
