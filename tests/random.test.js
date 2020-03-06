@@ -9,14 +9,16 @@ describe('Generate a random number without a seed between a range of two numbers
     test.each([
         [2,5, true],
         [1,100, true],
-        [2,200, true]
+        [2,200, true],
+        [2.5,200.5,true]
     ])('.randBetween(%i,%i)', (a, b,expected) => {
         expect(rand.rangeBetweenTwo(a,b)>= a && rand.rangeBetweenTwo(a,b) <= b).toBe(expected)
     });
 
     test('error is thrown when min > max ', () => {
-       expect(()=>{rand.rangeBetweenTwo(10, 8)}).toThrow();
+        expect(()=>{rand.rangeBetweenTwo(10, 8)}).toThrow();
     });
+
 });
 
 describe('Generate a list of N random numbers with a seed and between a range of numbers - Both Integer and Decimal', () => {
@@ -43,7 +45,15 @@ describe('Select a random item from a list', () => {
 describe('Select N number of items from a list without a seed', () => {
     test('Select N number of items from a list without a seed', () => {
         let source  =  [3, 8, 11, 17, 19,8, 12, 13, 17, 20]
-        expect(rand.selectNitem(source).every(value => source.indexOf(value)!=-1)).toBeTruthy();
+        expect(rand.selectNitem(source,3).every(value => source.indexOf(value)!=-1)).toBeTruthy();
+    });
+    test('N > array.length throw error', () => {
+        let source  =  [3, 8, 11, 17, 19,8, 12, 13, 17, 20]
+        expect(()=>{rand.selectNitem(source,1000)}).toThrowError();
+    });
+    test('generate length of 3', () => {
+        let source  =  [3, 8, 11, 17, 19,8, 12, 13, 17, 20]
+        expect(rand.selectNitem(source,3).length).toBe(3);
     });
 });
 
