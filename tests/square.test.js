@@ -1,4 +1,4 @@
-const  square = require('../calculation/square');
+const  square = require('../basicCalculation/methods/square');
 
 describe('Square of 2 is 4 ',()=>{
   test('Square of 2 is 4 ', () => {

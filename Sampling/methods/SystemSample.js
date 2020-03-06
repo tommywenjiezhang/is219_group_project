@@ -1,5 +1,5 @@
-let mo = require('../calculation/MathOperation');
-let stats= require("../calculation/StatisticsOperation")
+let mo = require('../../basicCalculation/methods/MathOperation');
+let stats= require("../../Statistic/StatisticsOperation")
 
 module.exports = function(arr,sampleSize,start){
     let system = Math.floor(arr.length / sampleSize)

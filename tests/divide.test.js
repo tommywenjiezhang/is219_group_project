@@ -1,4 +1,4 @@
-const divide = require('../calculation/divide');
+const divide = require('../basicCalculation/methods/divide');
 
 
 describe('divide 2 divided by  2 to equal 1',()=>{

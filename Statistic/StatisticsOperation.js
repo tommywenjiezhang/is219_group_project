@@ -1,72 +1,77 @@
-const  MathOperation = require('./MathOperation');
+const Calculator = require("../basicCalculation/Calculator")
 const  { jStat } = require('jstat');
 const  ss = require('simple-statistics');
 
-class StatisticsOperation{
-    static mean(arr =[]){
-        return MathOperation.sumList(arr) / arr.length;
+class StatisticsOperation extends Calculator {
+    constructor() {
+        super();
+    }
+
+
+     mean(arr =[]){
+        return super.sumList(arr) / arr.length;
     }
     
-    static variance(arr){
-        let mean = StatisticsOperation.mean(arr);
+     variance(arr){
+        let mean = this.mean(arr);
 
         let variance = arr.map((value)=>
         {
             if(typeof value === 'number'){
-                return MathOperation.square(value - mean);
+                return super.square(value - mean);
             }
         }).filter(value=> value != NaN);
         
         return variance;
     }
-    static stdev(arr){
+     stdev(arr){
         let size = arr.length;
-        let  varianceSumResult = MathOperation.sumList(StatisticsOperation.variance(arr));
-        let result = MathOperation.squareRoot(MathOperation.quotient(varianceSumResult,size));
+        let  varianceSumResult = super.sumList(this.variance(arr));
+        let result = super.squareRoot(super.Divide(varianceSumResult,size));
         return result;
     }
-    static median(arr){
+     median(arr){
        return ss.median(arr)
     }
-    static normPdf(xArr){
+     normPdf(xArr){
         return xArr.map((value) => {
-            return jStat.normal.pdf(value,StatisticsOperation.mean(xArr),StatisticsOperation.stdev(xArr));
+            return jStat.normal.pdf(value,this.mean(xArr),this.stdev(xArr));
         })
     }
 
-    static zScore(x,arr){
-        return (x - StatisticsOperation.mean(arr)) / StatisticsOperation.stdev(arr);
+     zScore(x,arr){
+        return (x - this.mean(arr)) / this.stdev(arr);
     }
 
-    static quartiles(arr){
+     quartiles(arr){
         let middle = Math.round(arr.length/2);
-        let q1 = StatisticsOperation.median(arr)
-        let q2 = StatisticsOperation.median(arr.slice(0,middle-1))
-        let q3 = StatisticsOperation.median(arr.slice(middle+1,arr.length -1))
+        let q1 = this.median(arr)
+        let q2 = this.median(arr.slice(0,middle-1))
+        let q3 = this.median(arr.slice(middle+1,arr.length -1))
         return [q1,q2,q3].sort();
     }
     // Skewness
-    static skewness(arr){
+     skewness(arr){
         return ss.sampleSkewness(arr);
     }
     // Sample Correlation
-    static sampleCorrlation(set1,set2){
+     sampleCorrlation(set1,set2){
         let result = ss.sampleCorrelation(set1,set2).toFixed(3);
         return parseFloat(result);
     }
 
     // Population Correlation
-    static populationCorrelation(arr1, arr2){
+     populationCorrelation(arr1, arr2){
         return jStat.corrcoeff(arr1,arr2)
     }
     // Mean Deviation / Mean Absolute Deviation
-    static meanStdev(arr){
+     meanStdev(arr){
         return jStat.stdev(arr);
     }
-    static mode(arr){
+     mode(arr){
         return jStat.mode(arr)
     }
-    static toString (arr,func){
+     toString (arr,func){
         let result = func(arr)
         console.log("function name: " + func.name + " result is : " + result )
     }

@@ -1,4 +1,4 @@
-let math  = require('../calculation/MathOperation')
+let math  = require('../../basicCalculation/methods/MathOperation')
 
 
 module.exports = function(zScore, p, e){

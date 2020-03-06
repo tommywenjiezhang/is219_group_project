@@ -1,4 +1,4 @@
-const sum = require('../calculation/sum');
+const sum = require('../basicCalculation/sum');
 
 
 describe('adds 1 + 2 to equal 3',()=>{

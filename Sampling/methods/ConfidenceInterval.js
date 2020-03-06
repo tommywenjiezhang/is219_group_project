@@ -1,7 +1,9 @@
 
 const fs = require('fs');
-const mo = require("../calculation/MathOperation")
-const stats = require("../calculation/StatisticsOperation")
+const mo = require("../../basicCalculation/methods/MathOperation")
+const Stats = require("../../Statistic/StatisticsOperation")
+const stats = new Stats();
+
 class ConfidenceInterval {
     static tDistribution(arr, ci) {
         let df = arr.length - 1;

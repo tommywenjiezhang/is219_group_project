@@ -1,4 +1,4 @@
-const sum = require('./sum');
+const sum = require('../sum');
 const multiply = require('./multiply');
 const divide = require('./divide');
 const square = require('./square');

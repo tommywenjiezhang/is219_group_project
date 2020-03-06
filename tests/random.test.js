@@ -1,5 +1,9 @@
-let rand =  require("../Random/RandomFunction")
+let rand;
+const RandomCalc = require("../Random/RandomCalculator")
 
+beforeEach(() => {
+    rand = new RandomCalc();
+});
 
 describe('Generate a random number without a seed between a range of two numbers - Both Integer and Decimal', () => {
     test.each([

@@ -1,36 +1,37 @@
-const srt = require('./SimpleSample')
-const ci = require('./ConfidenceInterval')
-const sysS= require("./SystemSample")
-const cochran = require("../Sampling/Cochran")
+const srt = require('./methods/SimpleSample')
+const Calculator = require("../basicCalculation/Calculator")
+const ci = require('./methods/ConfidenceInterval')
+const sysS= require("./methods/SystemSample")
+const cochran = require("./methods/Cochran")
 const  { jStat } = require('jstat');
-const stats = require('../calculation/StatisticsOperation')
-const mE = require("./marginofError")
+const stats = require('../Statistic/StatisticsOperation')
+const mE = require("./methods/marginofError")
 
-class SamplingMethods{
-    static simpleRandomTest(arr,samplesize){
+class SamplingMethods extends Calculator{
+     simpleRandomTest(arr,samplesize){
         return srt(arr,samplesize)
     }
 
-    static  confidenceInterval(arr, cL){
+      confidenceInterval(arr, cL){
         return ci.tDistribution(arr,cL)
     }
 
-    static cochran(zScore, cL,p){
+     cochran(zScore, cL,p){
         return Math.ceil(cochran(zScore,p,1-cL))
     }
 
-    static clWidth(W,cL ,p= 0.5,){
+     clWidth(W,cL ,p= 0.5,){
         return Math.ceil(ci.sampleSizeWithWidth(cL,W,p))
     }
 
-    static sampleStd(cL,std ,E){
+     sampleStd(cL,std ,E){
         return Math.ceil(ci.sampleSizeStd(std,cL,E))
     }
-    static systemSampling(arr,size,start){
+     systemSampling(arr,size,start){
         return sysS(arr,size,start)
     }
 
-    static marginOfError(std,size,z){
+     marginOfError(std,size,z){
         return mE(std,size,z);
     }
 }

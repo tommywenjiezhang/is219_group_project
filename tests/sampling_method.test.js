@@ -1,5 +1,8 @@
-var sm = require('../Sampling/SamplingMethods')
+var SmaplingCalculator = require('../Sampling/SamplingMethods')
 
+beforeEach(() => {
+    sm = new SmaplingCalculator();
+});
 describe('sample random  sampling', () => {
     var sourceArr= [3, 8, 11, 17, 19,8, 12, 13, 17, 20]
     test('arrary length', () => {
