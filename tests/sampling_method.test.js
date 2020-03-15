@@ -1,4 +1,4 @@
-var SmaplingCalculator = require('../Sampling/SamplingMethods')
+var SmaplingCalculator = require('../Sampling/SampleCalculator')
 
 beforeEach(() => {
     sm = new SmaplingCalculator();
