@@ -9,8 +9,8 @@
 
 <img src="./ClassDigram.png"/>
 
-<h1>Docs</h1>
-<a href="https://tommywenjiezhang.github.io/is219_group_project"/>To view Github page</a>
+<h1>Docs: <a href="https://tommywenjiezhang.github.io/is219_group_project"/>To view Github page</a> </h1>
+
 ## Classes
 <dl>
 <dt><a href="#RandomCalculator">RandomCalculator</a> ⇐ <code><a href="#Calculator">Calculator</a></code></dt>
