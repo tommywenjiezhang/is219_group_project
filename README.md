@@ -6,7 +6,8 @@
 [![dependencies Status](https://david-dm.org/tommywenjiezhang/is219_group_project/status.svg)](https://david-dm.org/tommywenjiezhang/is219_group_project) [![devDependency Status](https://david-dm.org/tommywenjiezhang/is219_group_project/dev-status.svg)](https://david-dm.org/tommywenjiezhang/is219_group_project?type=dev)
 
 <h1>Group Project Assignment </h1>
-<img src="ClassDigram.png"/>
+
+<img src="./ClassDigram.png"/>
 
 <h1>Docs</h1>
 ## Classes
