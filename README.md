@@ -675,7 +675,7 @@ Sqaure root of number
 | --- | --- |
 | a | <code>number</code> | 
 
-**Table for tasks performed**
+<h2> Table for tasks performed </h2>
 <table style="width:100%">
   <tr>
     <th>Todo
