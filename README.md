@@ -716,7 +716,7 @@ Sqaure root of number
                   <td> Create Margin of Error function 
  </td>
                   <td> Wenjie </td>
-                      <td>Anjlai</td>
+                      <td>Anjali</td>
                       <td>both</td>
                        <td>completed</td>
                 </tr>
