@@ -678,11 +678,11 @@ Sqaure root of number
 **Table for tasks performed**
 <table style="width:100%">
   <tr>
-    <th>Todo</th>
-    <th>progressed by </th>
-    <th>Reviewed By</th>
-    <th>Done by<th>  
-    <th>completion</th>
+    <th>Todo
+    <th>progressed by
+    <th>Reviewed By
+    <th>Done by 
+    <th>completion
   </tr>
   <tr>
     <td>Create Descriptive Statistics Functions</td>
@@ -754,10 +754,10 @@ Sqaure root of number
  <tr>
  <tr>
        <td> Random Generator functions </td>
-      <td>  Both </td>
-          <td>Both /td>
-          <td>Both</td>
-           <td>completed</td>
+      <td>  Both 
+          <td>Both 
+          <td>Both
+           <td>completed
      </tr>
      
   <tr> 
@@ -779,5 +779,7 @@ Sqaure root of number
     
 
 </table>
+
+                  
 
 
