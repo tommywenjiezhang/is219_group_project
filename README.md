@@ -674,3 +674,110 @@ Sqaure root of number
 | Param | Type |
 | --- | --- |
 | a | <code>number</code> | 
+
+**Table for tasks performed**
+<table style="width:100%">
+  <tr>
+    <th>Todo</th>
+    <th>progressed by </th>
+    <th>Reviewed By</th>
+    <th>Done by<th>  
+    <th>completion</th>
+  </tr>
+  <tr>
+    <td>Create Descriptive Statistics Functions</td>
+   <td> Wenjie Zhang  </td>
+       <td>Anjlali Kumari </td>
+       <td>Wenjie and Anjali </td>
+       <td>completed</td>
+  </tr>
+  <tr>
+    <td> Create Simple random sampling </td>
+    <td>Wenjie Zhang </td>
+    <td>Anjali </td>
+    <td>Wenjie and Anjali </td>
+    <td>completed</d>
+  </tr>
+   <tr>
+      <td> ceate Systematic sampling  </td>
+     <td> Wenjie and anjali </td>
+         <td>Both </td>
+         <td>Both</td>
+         <td>completed</td>
+    </tr>
+    <tr>
+          <td>create Confidence Interval For a Sample function</td>
+          <td> wenjie </td>
+              <td>Anjali</td>
+              <td>Wenjie and Anjali</td>
+               <td>completed</td>
+        </tr>
+        <tr>
+                  <td> Create Margin of Error function 
+ </td>
+                  <td> Wenjie </td>
+                      <td>Anjlai</td>
+                      <td>both</td>
+                       <td>completed</td>
+                </tr>
+                <tr>
+                                  <td> Confidence Interval function </td>
+                                  <td> Wenjie</td>
+                                      <td>Anjali</td>
+                                      <td>Both</td>
+                                       <td>completed</td>
+                                </tr>
+                <tr>
+                          <td> Write Cochran’s Sample Size Formula </td>
+                          <td> Wenjie</td>
+                              <td>Anjali </td>
+                              <td>Both</td>
+                               <td>completed</td>
+                        </tr>
+               <tr>
+                                         <td>How to Find a Sample Size Given a Confidence Interval and Width (unknown population standard deviation)
+ </td>
+                                         <td> wenjie  </td>
+                                             <td>Anjali</td>
+                                             <td>Both</td>
+                                              <td>completed</td>
+                                       </tr>
+<tr>
+      <td>How to Find a Sample Size Given a Confidence Interval and Width (known population standard deviation)
+ </td>
+     <td> Wenjie </td>
+         <td>Anjali</td>
+         <td>Both</td>
+          <td>completed</td>
+    </tr>
+    
+ <tr>
+ <tr>
+       <td> Random Generator functions </td>
+      <td>  Both </td>
+          <td>Both /td>
+          <td>Both</td>
+           <td>completed</td>
+     </tr>
+     
+  <tr> 
+  <tr>
+         <td> Create test suites </td>
+        <td> Wenjie </td>
+            <td>Both </td>
+            <td>Both</td>
+             <td>completed</td>
+       </tr>
+        <tr>
+                <td> Create README.MD  </td>
+               <td> Anjali</td>
+                   <td>Wenjie</td>
+                   <td>Both</td>
+                    <td>completed</td>
+              </tr>
+       
+    
+
+</table>
+
+
